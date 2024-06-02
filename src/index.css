@@ -1,0 +1,128 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  section {
+    @apply py-[75px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-full w-[1440px] px-5 mx-auto;
+  }
+
+  .btn {
+    @apply bg-primaryColor py-[15px] px-[35px] rounded-[50px] text-white font-[310] mt-[40px];
+  }
+
+  .heading {
+    @apply text-[45px] leading-[52px] font-[698] text-headingColor;
+  }
+
+  .text_para {
+    @apply text-[16px] leading-[25px] font-[350] text-textColor mt-[16px];
+  }
+
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .hero__section {
+    @apply bg-[url('./assets/images/purple.png')] bg-no-repeat bg-center bg-cover h-[720px];
+  }
+
+  .About {
+    @apply bg-[url('./assets/images/purple.png')] bg-no-repeat bg-cover bg-cover w-full h-[720px] leading-[100px];
+  }
+
+  .ServiceList {
+    @apply bg-[url('./assets/images/purple.png')] bg-no-repeat bg-cover bg-cover w-full h-[1000px] leading-[100px];
+  }
+
+  .Yoyo {
+    @apply bg-[url('./assets/images/blur.png')] bg-no-repeat bg-cover bg-cover w-full h-[720px] leading-[100px];
+  }
+
+  .DoctorList {
+    @apply bg-[url('./assets/images/purple.png')] bg-no-repeat bg-cover bg-cover w-full h-[950px] leading-[90px];
+  }
+
+  .faq_section {
+    @apply bg-[url('./assets/images/purple.png')] bg-no-repeat bg-center bg-cover h-[720px];
+  }
+
+  /* styles.css */
+  .dual-tone-background {
+    background: linear-gradient(to bottom right, skyblue 50%, lavender 50%);
+    /* Adjust the angle and color stops as needed */
+  }
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .slide-in-left {
+    animation: slideInLeft 1s ease forwards;
+  }
+
+  .slide-in-right {
+    animation: slideInRight 1s ease forwards;
+  }
+  @keyframes scrollDown {
+    0% {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .scroll-down {
+    animation: scrollDown 1s ease forwards;
+  }
+  @keyframes spin {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(360deg);
+    }
+  }
+  .logo-animation {
+    animation: rotate 5s linear infinite;
+  }
+  .form_label {
+    @apply text-textColor font-semibold text-[16px] mb-2;
+  }
+  .form_input {
+    @apply w-full px-4 py-3 border border-solid border-[#0066ff61] focus:outline-none focus:border-primaryColor text-[16px] leading-7 text-headingColor placeholder:text-textColor cursor-pointer;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    .container {
+      @apply w-full;
+    }
+  }
+}
